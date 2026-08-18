@@ -11,19 +11,19 @@ import java.time.LocalDate;
 public class Expense {
     @Id
     @GeneratedValue
-    Long id;
+    private Long id;
 
     @NotNull(message = "Amount Field Cannot Be Empty!")
     @Positive(message = "Amount Cannot Be Negative Or Zero!")
-    BigDecimal amount;
+    private BigDecimal amount;
 
-    LocalDate date;
+    private LocalDate date;
 
-    String description;
+    private String description;
 
     @ManyToOne
     @JoinColumn(name = "category_id")
-    Category category;
+    private Category category;
 
     /*
     if no date was provided manually when creating a new expense,

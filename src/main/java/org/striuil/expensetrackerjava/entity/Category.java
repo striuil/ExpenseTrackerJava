@@ -10,10 +10,10 @@ import jakarta.validation.constraints.NotBlank;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
     @NotBlank(message = "Category Name Is Required!")
-    String name;
+    private String name;
 
     public Long getId() {
         return id;
